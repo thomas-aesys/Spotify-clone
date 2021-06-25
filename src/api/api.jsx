@@ -21,4 +21,6 @@ export const getCategoriesPlaylist = (category_id = '') => axiosSpotify.get(`bro
 
 export const getArtists = (id= '') => axiosSpotify.get(`artists/${id}`)
 
-export const getAllNewReleases = () => axiosSpotify.get(`/browse/new-releases`)
+export const getAllNewReleases = () => axiosSpotify.get(`browse/new-releases`)
+
+export const getAllCategories = () => axiosSpotify.get('browse/categories')
