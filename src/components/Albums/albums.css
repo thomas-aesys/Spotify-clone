@@ -1,0 +1,50 @@
+.container_card{
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.card{
+    text-align: center;
+    background-color: #292828;
+    padding: 16px;
+    width: 196px;
+    margin: 5px;
+}
+
+.card_image{
+    border-radius: 50%;
+}
+
+.card:hover{
+    background-color: #383737;
+}
+
+.container_card2 .card_name{
+    color: #fff;
+    margin-top: 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+    width: 150px; 
+    overflow: hidden;
+}
+
+.container_card2 .card_type{
+    color: rgb(158,158,158);
+    font-size: 14px;
+    word-wrap: break-word;
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
+.title_playlist{
+    margin-top: 20px;
+}
+
+.card .card_description{
+    font-size: 13px;
+}
