@@ -1,17 +1,32 @@
 import React, { useEffect, useState } from 'react'
-import {getUserSavedTracks} from '../../api/api'
 import './Playlist.css'
+import { getPlaylist } from '../../api/api'
 
-const Playlist = ()=>{
-    const [track,setTrack] = useState([]);
+const Playlist = () => {
+    const [playlist, setPlaylist] = useState([]);
 
-    useEffect(()=>{
-        getUserSavedTracks().then(res => console.log(res.data.items))
-    },[])
+    useEffect(() => {
+        getPlaylist().then(res => setPlaylist(res.data.items))
+    }, [])
 
-    return(
+    return (
         <div className="container_content_home">
-            <h2 className="title_content_home">Playlist</h2>
+            <h2 className="title_playlist">Playlist</h2>
+            {
+                playlist.map(elem => {
+                    return (
+                        <>
+                            <div className="container_card">
+                                <div className="card">
+                                    <img src={elem.images[0].url} width={'161px'} height={'161px'}></img>
+                                    <p className="card_name">{elem.name}</p>
+                                    <p className="card_description">{elem.description}</p>
+                                </div>
+                            </div>
+                        </>
+                    )
+                })
+            }
         </div>
     )
 }

@@ -25,4 +25,4 @@ export const getAllNewReleases = () => axiosSpotify.get(`browse/new-releases`)
 
 export const getAllCategories = (limit = 20) => axiosSpotify.get(`browse/categories?limit=${limit}`)
 
-export const getUserSavedTracks = () => axiosSpotify.get(`me/tracks`)
+export const getPlaylist = () => axiosSpotify.get(`me/playlists`)

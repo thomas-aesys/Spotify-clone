@@ -14,9 +14,9 @@ const ContentLibrary = () => {
     return (
         <Switch>
             <Route exact path="/library/playlists" component={Playlist}></Route>
-            <Route path="library/podcast" component={Podcast}></Route>
-            <Route path="library/artits" component={Artists}></Route>
-            <Route path="library/albums" component={Albums}></Route>
+            <Route path="/library/podcast" component={Podcast}></Route>
+            <Route path="/library/artits" component={Artists}></Route>
+            <Route path="/library/albums" component={Albums}></Route>
         </Switch>
     )
 }
