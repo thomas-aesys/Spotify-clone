@@ -51,7 +51,7 @@ const Playlist = () => {
 
             <h2 className="title_playlist">Mood</h2>
             {
-                moodplaylist.slice(5, 10).map(elem => {
+                moodplaylist.slice(0, 5).map(elem => {
                     return (
                         <div className="container_card">
                             <div className="card">

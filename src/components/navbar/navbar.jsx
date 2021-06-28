@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import './navbar.css'
+import { Link } from 'react-router-dom'
 
 const Navbar = ({ navbar }) => {
     const userName = sessionStorage.getItem('user')
@@ -65,10 +66,10 @@ const Navbar = ({ navbar }) => {
                                     </button>
                                 </div>
                                 <div className="navbar_center3">
-                                    <button className="button_navbar_center3">Playlist</button>
-                                    <button className="button_navbar_center3">Podcast</button>
-                                    <button className="button_navbar_center3">Artisti</button>
-                                    <button className="button_navbar_center3">Album</button>
+                                    <Link to="/library/playlists"><button className="button_navbar_center3">Playlist</button></Link>
+                                    <Link to="/library/podcast"><button className="button_navbar_center3">Podcast</button></Link>
+                                    <Link to="/library/artits"><button className="button_navbar_center3">Artisti</button></Link>
+                                    <Link to="/library/albums"><button className="button_navbar_center3">Album</button></Link>
                                 </div>
 
                                 <div className="navbar_right">

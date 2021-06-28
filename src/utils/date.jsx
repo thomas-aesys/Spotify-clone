@@ -1,5 +1,3 @@
-import React from 'react'
-
 export function date(){
     let text = '';
     let date = new Date();

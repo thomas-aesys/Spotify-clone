@@ -22,7 +22,7 @@ const Sidebar = ({ setNavbar }) => {
                         <span className="search_button" >Cerca</span>
                     </button>
                 </Link>
-                <Link to="/library">
+                <Link to="/library/playlists">
                     <button onClick={() => setNavbar('library')} className="button_library">
                         <i class="far fa-bookmark" height="24" width="24"></i>
                         <span className="library_button" >La tua libreria</span>
