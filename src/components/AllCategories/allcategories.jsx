@@ -5,10 +5,10 @@ import './allcategories.css'
 
 const AllCategories = () => {
     const [cat, setCat] = useState([]);
-
     useEffect(() => {
         getAllCategories(40).then(res => setCat(res.data.categories.items))
     }, [])
+    
     return (
         <div>
             {

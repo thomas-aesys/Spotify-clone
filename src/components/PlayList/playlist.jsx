@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { getCategoriesPlaylist } from '../../api/api'
-import { date } from '../../utils/date'
+import { Link } from 'react-router-dom'
 import './playlist.css'
 
 const Playlist = () => {
@@ -22,13 +22,14 @@ const Playlist = () => {
             {
                 topplaylist.slice(0, 5).map(elem => {
                     return (
-                        <div className="container_card">
+                        <Link to={`/playlist/${elem.id}`}><div className="container_card">
                             <div className="card">
                                 <img src={elem.images[0].url} width={'161px'} height={'161px'}></img>
                                 <p className="card_name">{elem.name}</p>
                                 <p className="card_description">{elem.description}</p>
                             </div>
                         </div>
+                        </Link>
                     )
                 })
             }
@@ -38,13 +39,14 @@ const Playlist = () => {
                 partyplaylist.slice(0, 5).map(elem => {
                     return (
 
-                        <div className="container_card">
+                        <Link to={`/playlist/${elem.id}`}><div className="container_card">
                             <div className="card">
                                 <img src={elem.images[0].url} width={'161px'} height={'161px'}></img>
                                 <p className="card_name">{elem.name}</p>
                                 <p className="card_description">{elem.description}</p>
                             </div>
                         </div>
+                        </Link>
                     )
                 })
             }
@@ -53,14 +55,15 @@ const Playlist = () => {
             {
                 moodplaylist.slice(0, 5).map(elem => {
                     return (
-                        <div className="container_card">
-                            <div className="card">
-                                <img src={elem.images[0].url} width={'161px'} height={'161px'}></img>
-                                <p className="card_name">{elem.name}</p>
-                                <p className="card_description">{elem.description}</p>
+                        <Link to={`/playlist/${elem.id}`}>
+                            <div className="container_card">
+                                <div className="card">
+                                    <img src={elem.images[0].url} width={'161px'} height={'161px'}></img>
+                                    <p className="card_name">{elem.name}</p>
+                                    <p className="card_description">{elem.description}</p>
+                                </div>
                             </div>
-                        </div>
-
+                        </Link>
                     )
                 })
             }
