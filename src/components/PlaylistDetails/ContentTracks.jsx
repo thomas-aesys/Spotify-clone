@@ -1,61 +1,20 @@
-import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom';
-import { getPlaylistDetails } from '../../api/api';
+import React from 'react'
+import './ContentTracks.css'
+const ContentTracks = ({ index, trackImage, trackName, albumName, date }) => {
 
-const ContentTracks = () => {
-    const [tracks, setTracks] = useState([])
-
-    let { id } = useParams()
-
-    useEffect(() => {
-        getPlaylistDetails(id).then(res => setTracks(res.data.tracks.items))
-
-    }, [])
     return (
-        <div className="top_desc">
-            <div className="albums1">
-                {
-                    tracks.map((elem,index) => {
-                        return <>
-                            <div className="top_first">
-                                {index + 1}
-                            </div>
-                        </>
-                    })
-                }
+        <div className="albums">
+            <div className="index">
+                <p>{index}</p>
             </div>
-            <div className="albums">
-                {
-                    tracks.map(elem => {
-                        return <>
-                            <div className="top_name">
-                                <p>{elem.track.artists[0].name}</p>
-                            </div>
-                        </>
-                    })
-                }
+            <div className="track_name">
+                <p>{trackName}</p>
             </div>
-            <div className="albums">
-                {
-                    tracks.map(elem => {
-                        return <>
-                            <div className="top_album">
-                                <p>{elem.track.album.name}</p>
-                            </div>
-                        </>
-                    })
-                }
+            <div className="album_name">
+                <p>{albumName}</p>
             </div>
-            <div className="albums">
-                {
-                    tracks.map(elem => {
-                        return <>
-                            <div className="top2">
-                                <p>{(elem.added_at.split('T'))[0]}</p>
-                            </div>
-                        </>
-                    })
-                }
+            <div className="date">
+                <p>{date}</p>
             </div>
         </div>
     )

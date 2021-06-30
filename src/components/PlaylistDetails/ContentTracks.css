@@ -1,0 +1,26 @@
+.albums{
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    color: #fff;
+    margin: 15px 0;
+}
+
+.track_image{
+    width: 10%;
+}
+
+.track_name{
+    width: 30%;
+    font-size: 14px;
+}
+
+.album_name{
+    width: 30%;
+    font-size: 14px;
+}
+
+.date{
+    width: 30%;
+    font-size: 14px;
+}
